@@ -21,6 +21,9 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 public abstract class BeardifierMixin {
     @Inject(at = @At("HEAD"), method = "forStructuresInChunk", cancellable = true)
     private static void fixTheHydraBeard(StructureManager p_223938_, ChunkPos p_223939_, CallbackInfoReturnable<Beardifier> cir) {
+        if (true) {
+            return;
+        }
         int i = p_223939_.getMinBlockX();
         int j = p_223939_.getMinBlockZ();
         ObjectList<Beardifier.Rigid> objectlist = new ObjectArrayList<>(10);
